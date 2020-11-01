@@ -114,7 +114,7 @@ async function fetchAmountOfPaper() {
    const req = new Request(url)
    const apiResult = await req.loadJSON()
    const parsed = JSON.parse(apiResult);
-   return parsed.result.gameScore[1];
+   return ParseInt(parsed.result.gameScore[1]);
 }
 
 // fetches information of the configured store, e.g. opening hours, address etc.
